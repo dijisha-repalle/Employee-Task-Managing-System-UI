@@ -137,12 +137,12 @@ const EmpTable = () => {
 
   const handlePageSizeChange = (e) => {
     setPageSize(Number(e.target.value));
-    setCurrentPage(0); // Reset to first page when page size changes
+    setCurrentPage(0); 
   };
 
   const handleSortChange = (e) => {
     setSortBy(e.target.value);
-    setCurrentPage(0); // Reset to first page when sort changes
+    setCurrentPage(0); 
   };
 
   const getOffcanvasTitle = () => {
