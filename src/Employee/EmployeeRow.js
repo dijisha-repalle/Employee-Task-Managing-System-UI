@@ -11,18 +11,7 @@ const EmployeeRow = ({ emp, onView, onEdit, onDelete }) => {
       <td>{emp.department}</td>
       <td>{emp.joiningDate}</td>
       <td>{emp.role}</td>
-      {/* <td>
-        <button onClick={() => onView(emp)} className="view-btn">
-          View
-        </button>
-        <button onClick={() => onEdit(emp)} className="edit-btn">
-          Edit
-        </button>
-        <button onClick={() => onDelete(emp)} className="delete-btn">
-          Delete
-        </button>
-      </td> */}
-       <td style={{ display: "flex", gap: "12px" }}>
+      <td style={{ display: "flex", gap: "12px" }}>
         {/* View Icon */}
         <FiEye
           onClick={() => onView(emp)}
