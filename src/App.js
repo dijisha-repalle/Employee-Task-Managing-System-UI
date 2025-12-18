@@ -1,5 +1,4 @@
 import './App.css';
-import EmpTable from './Employee/EmpTable'
 import TaskTable from './Task/TaskTable';
 
 
@@ -8,8 +7,7 @@ import TaskTable from './Task/TaskTable';
 function App() {
   return (
     <div>
-      <TaskTable></TaskTable>
-    
+      <TaskTable />
       
     </div>
   );

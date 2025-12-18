@@ -10,17 +10,15 @@ const TaskRow = ({taskobj,onEdit,onView,onDelete})=>{
             <td>{taskobj.description}</td>
             <td>{taskobj.dueDate}</td>
             <td>{taskobj.status}</td>
-            <td>{taskobj.assignedBy}</td>
-            <td>{taskobj.assignedTo}</td>
+            <td>{taskobj.assignedBy?.name ?? "N/A"}</td>
+            <td>{taskobj.assignedTo?.name ?? "Unassigned"}</td>
+
             <td style={{ display: "flex", gap: "12px" }}>
                 <FiEye
                           onClick={() => onView(taskobj)}
                           className="icon view-icon"
                           title="View"
                 />
-                
-
-                
                 <FiEdit
                 onClick={()=> onEdit(taskobj)}
                 className="icon edit-icon"
