@@ -1,5 +1,6 @@
 import './App.css';
 import TaskTable from './Task/TaskTable';
+import EmpTable from './Employee/EmpTable';
 
 
 
@@ -7,7 +8,8 @@ import TaskTable from './Task/TaskTable';
 function App() {
   return (
     <div>
-      <TaskTable />
+      {/* <TaskTable/> */}
+      <EmpTable></EmpTable>
       
     </div>
   );
