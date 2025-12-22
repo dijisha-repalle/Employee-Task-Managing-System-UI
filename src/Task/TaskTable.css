@@ -1,1 +1,103 @@
+/* Task table styling */
 
+:root {
+  --task-border: #e5e7eb;
+  --task-text: #111827;
+  --task-muted: #6b7280;
+  --task-row-hover: #f9fafb;
+  --task-head: #f3f4f6;
+
+  --task-view: #2563eb;
+  --task-edit: #f59e0b;
+  --task-delete: #dc2626;
+}
+
+/* Give some breathing room if used inside plain pages */
+.task-page {
+  padding: 16px;
+  color: var(--task-text);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--task-border);
+  background: #fff;
+}
+
+.table thead th {
+  background: var(--task-head);
+  text-align: left;
+  font-weight: 600;
+  color: var(--task-text);
+  border-bottom: 1px solid var(--task-border);
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.table tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--task-border);
+  color: var(--task-text);
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background: var(--task-row-hover);
+}
+
+/* Make long descriptions wrap nicely */
+.table td {
+  word-break: break-word;
+}
+
+/* Action icons (used in TaskRow.js) */
+.icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--task-muted);
+  transition: transform 120ms ease, color 120ms ease, opacity 120ms ease;
+}
+
+.icon:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.view-icon:hover {
+  color: var(--task-view);
+}
+
+.edit-icon:hover {
+  color: var(--task-edit);
+}
+
+.delete-icon:hover {
+  color: var(--task-delete);
+}
+
+/* Optional: compact tables on small screens */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    border-bottom: 1px solid var(--task-border);
+    padding: 8px 0;
+  }
+
+  .table tbody td {
+    border-bottom: none;
+    padding: 6px 12px;
+  }
+}
